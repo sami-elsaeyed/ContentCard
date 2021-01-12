@@ -1,25 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { findAllByDisplayValue } from '@testing-library/react';
+import { Component } from 'react';
+import ContentCard from "./ContentCard.jsx"
+function App(){
+    return(
+      <table>
+      <ContentCard name="Sami Elsaeyed" number="123456789" email="dontemailme@bye.com"/>
+      <ContentCard name="Bob Builder" number="24681012" email="yeswecan@cement.com"/>
+      <ContentCard name="Bertram Gilfoyle" number="135791113" email="artlesscommerce@no.com"/>
+      </table>
+      );
+  }
 
 export default App;
